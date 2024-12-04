@@ -43,5 +43,5 @@ jobs:
 
       - name: Build and Push Docker Image
         run: |
-          docker build -t $IMAGE_NAME:${{ env.version }} --build-arg VERSION=${{ env.fullVersion }} -f integrator_ui_back/Dockerfile .
+          docker build -t $IMAGE_NAME:${{ env.version }} --build-arg VERSION=${{ env.fullVersion }} -f integrator_auth/Dockerfile .
           docker push $IMAGE_NAME:${{ env.version }}
