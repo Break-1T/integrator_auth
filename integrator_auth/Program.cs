@@ -13,7 +13,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.WebHost.UseKestrel(options =>
 {
     options.Limits.KeepAliveTimeout = TimeSpan.FromMinutes(10);
-    options.Listen(IPAddress.Any, 8081);
+    options.Listen(IPAddress.Any, 8080);
 });
 
 builder.Host.UseSerilog((whb, loggerConfiguration) =>
